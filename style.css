@@ -1,0 +1,114 @@
+*{
+    margin: 0px;
+    padding: 0px;
+   
+}
+.container{
+    display:flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    display: flex;
+    font-size: 0.75rem;
+    flex-direction: column;
+    height: 300px;
+    width:300px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* background-color: rgb(148, 89, 173); */
+    position: relative;
+    /* border: 18px solid rgb(67, 250, 67); */
+}
+.box::before{
+    content: '';
+    border-top:  4px solid #ac2abd;
+    border-bottom:  4px solid #ac2abd;
+    /* border-left: 4px solid #ac2abd; */
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    animation-name: avinash1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes avinash1{
+    0%{
+        transform: scaleX(0) rotate(0deg);
+        /* transform: scaleY(0); */
+    }
+    100%{
+        transform: scaleX(1) rotate(360deg);
+        /* transform: scaleY(1); */
+    }
+}
+.box::after{
+    content: '';
+    border-left:4px solid #ac2abd;
+    border-right:4px solid #ac2abd;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    animation-name: avinash2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+}
+@keyframes avinash2{
+   0%{
+       transform: scaleY(0) rotate(0deg);
+   }
+   100%{
+       transform: scaleY(1) rotate(360deg);
+   }
+}
+.rotated{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotate(45deg);
+    /* background-color: green; */
+}
+.rotated::before{
+    content: '';
+    border-top:  4px solid #ac2abd;
+    border-bottom:  4px solid #ac2abd;
+    /* border-left: 4px solid #ac2abd; */
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    animation-name: avinash1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.rotated::after{
+    content: '';
+    border-left:4px solid #ac2abd;
+    border-right:4px solid #ac2abd;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    animation-name: avinash2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
